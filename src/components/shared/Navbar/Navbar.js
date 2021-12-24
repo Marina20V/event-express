@@ -36,7 +36,7 @@ export default function Navbar() {
                 <Link to="/" className="navbar-logo">
                    <img src={logo} alt="Logo" />
                 </Link>
-                <div className="menu-icon" onClick={handleClick} onKeyDown={handleClick} aria-hidden="true">
+                <div className="menu-icon" role = "button" tabIndex={0} onClick={handleClick} onKeyUp={handleClick} >
                 {/* <div className="menu-icon"> */}
 
                     <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'} />

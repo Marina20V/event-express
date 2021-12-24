@@ -1,4 +1,4 @@
-const buttonReducer = (state=true, action) => {
+const buttonReducer = (state=false, action) => {
 
     switch(action.type) {
         case 'SIGN_UP':

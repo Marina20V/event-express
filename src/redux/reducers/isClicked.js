@@ -2,10 +2,10 @@ const isclickReducer = (state=false, action) => {
 
     switch(action.type) {
         case 'CLICK':
-            return !state;
+            return state;
         case '':
             default: 
-            return state;
+            return !state;
         }
 };
 
