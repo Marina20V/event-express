@@ -1,11 +1,14 @@
 import { combineReducers } from "redux";
 import counterReducer from "./counter";
-import loggedReducer from "./isLogged";
+import isclickReducer from "./isClicked";
+import buttonReducer from "./button";
 
 
 const allReducers = combineReducers({
     counter: counterReducer,
-    isLogged: loggedReducer
+    isClicked: isclickReducer,
+    button: buttonReducer
+
 });
 
 export default allReducers;
