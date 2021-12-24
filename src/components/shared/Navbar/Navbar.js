@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
@@ -28,12 +28,18 @@ export default function Navbar() {
            }
 
        };
+
+       useEffect(() => {
+           showButton();
+       }, []);
+
+
        window.addEventListener('resize', showButton);
     return (
         <nav className="navbar">
             <div className="navbar-container">
 
-                <Link to="/" className="navbar-logo">
+                <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                    <img src={logo} alt="Logo" />
                 </Link>
                 <div className="menu-icon" role = "button" tabIndex={0} onClick={handleClick} onKeyUp={handleClick} >
