@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .footer-subscription {
@@ -71,7 +72,7 @@
 
 .footer-links-items > h2 {
     color: #fff;
-    text-decoration: ;
+    text-decoration: none;
 }
 
 .footer-links-items > h2 {
@@ -161,3 +162,6 @@
         flex-direction: column;
     }
 }
+
+
+
