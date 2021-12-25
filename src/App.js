@@ -4,7 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 // import { increment, decrement } from './actions';
 import Navbar from './components/shared/Navbar/Navbar';
-import Home from './components/Home/Home'
+import About from './pages/About/About';
+import ClosestEvents from './pages/ClosestEvents/ClosestEvents';
+import Contact from './pages/Contact/Contact';
+import Home from './pages/Home/Home'
+import SignUp from './pages/SignUp/SignUp';
 
 
 function App() {
@@ -14,6 +18,12 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="/contact" element={<Contact />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/closestevents" element={<ClosestEvents />}/>
+            <Route path="/sign-up" element={<SignUp />}/>
+
+
         </Routes>
       </Router>
     </>
