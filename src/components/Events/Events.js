@@ -17,25 +17,25 @@ function Events() {
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
-                            path="/services"
+                            path="/closestevents"
                         />
                           <Event  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
-                            path="/services"
+                            path="closestevents"
                         />
                           <Event  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
-                            path="/services"
+                            path="closestevents"
                         />
                           <Event  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
-                            path="/services"
+                            path="closestevents"
                         />
                     </ul>
                 </div>
