@@ -1,11 +1,12 @@
 import React from 'react'
 import '../../App.css';
-import 
+import Events from "../Events/Events"
+
 
  function Home() {
     return (
         <div>
-            
+            <Events />
         </div>
     )
 }
