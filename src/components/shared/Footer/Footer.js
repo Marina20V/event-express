@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Footer.css';
-import logo from '../../../assets/images/logo.png';
+import logo from '../../../assets/images/logo3.png';
 
 export default function Footer() {
     return (
@@ -43,6 +43,30 @@ export default function Footer() {
                     <Link to="/" className="social-logo">
                     <img src={logo} alt="Logo" />
                     </Link>
+                    </div>
+                    <small className="website-rights">City Events © 2021 by Marina V</small>
+                    <div className="cosial-icons">
+                        <Link className="social-icon-link facebook"
+                        to="/"
+                        target="_blank"
+                        aria-label="Facebook"
+                        >
+                            <i className="fab fa-facebook"></i>
+                        </Link>
+                        <Link className="social-icon-link instagram"
+                        to="/"
+                        target="_blank"
+                        aria-label="Instagram"
+                        >
+                            <i className="fab fa-instagram"></i>
+                        </Link>
+                        <Link className="social-icon-link twitter"
+                        to="/"
+                        target="_blank"
+                        aria-label="Twitter"
+                        >
+                            <i className="fab fa-twitter"></i>
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/images/logo.png';
+import logo from '../../../assets/images/logo3.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
 
