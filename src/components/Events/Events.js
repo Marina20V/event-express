@@ -1,5 +1,5 @@
 import React from 'react';
-import Event from "../Event/Event"
+import EventItem from "../EventItem/EventItem"
 import "./Events.css";
 import event from "../../assets/images/event.jpg";
 
@@ -13,25 +13,25 @@ function Events() {
                 <div className="events wrapper">
                     
                     <ul className="events__items">
-                        <Event  
+                        <EventItem  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
                             path="/closestevents"
                         />
-                          <Event  
+                          <EventItem  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
                             path="closestevents"
                         />
-                          <Event  
+                          <EventItem  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
                             path="closestevents"
                         />
-                          <Event  
+                          <EventItem  
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"

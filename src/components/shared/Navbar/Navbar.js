@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/images/logo3.png';
+import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
 
@@ -70,11 +70,12 @@ export default function Navbar() {
                     </li>
                     <li className="nav-item">
                     <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
-                       Sign up
+                        Sign up
                     </Link>
                     </li>
                 </ul>
                 {button && <Button buttonStyle='btn--outline'>
+                <i className="fa fa-sign-in-alt"></i>
                     SIGN UP
                 </Button>}
             </div>
