@@ -1,9 +1,12 @@
 import React from 'react'
 
-export default function ClosestEvents() {
+ function ClosestEvents() {
     return (
-        <h1>
+        <div>
+            <h1>
             Closest events
-        </h1>
+           </h1>
+        </div>
     )
 }
+export default ClosestEvents;

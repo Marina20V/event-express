@@ -17,7 +17,7 @@ function Events() {
                             src={event}
                             text="Meet new people, make memories"
                             label="skiing event"
-                            path="/closestevents"
+                            path="/event"
                         />
                           <EventItem  
                             src={event}
