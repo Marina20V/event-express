@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo1.png';
@@ -20,21 +20,22 @@ export default function Navbar() {
             dispatch({type:'false'})
        }
 
-       const showButton = () => {
-           if(window.innerWidth <= 960) {
-               dispatch({type:'false'})
-           }else {
-            dispatch({type:'true'})
-           }
+    //    const showButton = () => {
+    //     //    console.log('showButton');;
+    //        if(window.innerWidth <= 960) {
+    //            dispatch({type:'false'})
+    //        }else {
+    //         dispatch({type:'true'})
+    //        }
 
-       };
+    //    };
 
-       useEffect(() => {
-           showButton();
-       }, []);
+    //    useEffect(() => {
+    //        showButton();
+    //    }, []);
 
 
-       window.addEventListener('resize', showButton);
+    //    window.addEventListener('resize', showButton);
     return (
         <nav className="navbar">
             <div className="navbar-container">
