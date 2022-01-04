@@ -11,8 +11,21 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp';
 
 function App() {
+
+//   getFetchUsers() {
+//     this.setState({
+//         loading: true
+//     }, () => {
+//         fetch("http://localhost:3000/posts").then(res => res.json()).then(result => this.setState({
+//             loading: false,
+//             users: result
+//         })).catch(console.log);
+//     });
+// }
+
   return (
     <>
+     
       <Router>
         <Navbar />
         <Routes>
@@ -21,6 +34,7 @@ function App() {
             <Route path="/about" element={<About />}/>
             <Route path="/closestevents" element={<ClosestEvents />}/>
             <Route path="/sign-up" element={<SignUp />}/>
+            {/* <Route path="/" exact><Redirect to="/main" /></Route> */}
             {/* <Route path="/event" element={<SliderComponent />}/> */}
         </Routes>
       </Router>
