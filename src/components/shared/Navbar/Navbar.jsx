@@ -46,7 +46,7 @@ export default function Navbar() {
                 <div className="menu-icon" role = "button" tabIndex={0} onClick={handleClick} onKeyUp={handleClick} >
                 {/* <div className="menu-icon"> */}
 
-                    <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'} />
+                    {/* <i className={isClicked ? 'fas fa-times' : 'fas fa-bars'} /> */}
                 </div>
                 <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
@@ -75,7 +75,7 @@ export default function Navbar() {
                     </Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>
+                {button && <Button buttonStyle='btn__outline'>
                 <i className="fa fa-sign-in-alt"></i>
                     SIGN UP
                 </Button>}

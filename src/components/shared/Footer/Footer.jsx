@@ -1,33 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
-import './Footer.css';
+import s from './Footer.module.scss';
 import logo from '../../../assets/images/logo1.png';
 
 export default function Footer() {
     return (
-        <div className="footer-container">
-            <section className="footer-subscription">
-                <p className="footer-subscription-heading">
+        <div className={s.footer_container}>
+            <section className={s.footer_subscription}>
+                <p className={s.footer_subscription_heading}>
                     Get the freshest CityEvents news
                 </p>
-                <p className="footer-subscription-text">
+                <p className={s.footer_subscription_text}>
                     You can unsubscribe any time
                 </p>
-                <div className="input-areas">
+                <div className={s.input_areas}>
                     <form action="">
                         <input type="email" 
                                name="email" 
                                placehoklder="Your email" 
-                               className="footer-input"
+                               className={s.footer_input}
                         />
-                        <Button buttonStyle="btn--putline">Subscribe</Button>
+                        <Button buttonStyle={s.btn__putline}>Subscribe</Button>
                     </form>
                 </div>
             </section>
-            <div className="footer links">
-                <div className="footer-link-wrapper">
-                    <div className="footer-links-items">
+            <div className={s.footer_links}>
+                <div className={s.footer_link_wrapper}>
+                    <div className={s.footer_links_items}>
                         <h2>About us</h2>
                         <Link to="/about">How it works</Link>
                         <Link to="/about">Testimonials</Link>
@@ -36,31 +36,31 @@ export default function Footer() {
 
                     </div>
                 </div>
-            </div>
-            <section className="socia media">
-                <div className="social-media-wrap">
-                    <div className="footer-logo">
-                    <Link to="/" className="social-logo">
+            </div> 
+            <section className={s.socia_media}>
+                <div className={s.social_media_wrap}>
+                    <div className={s.footer_logo}>
+                    <Link to="/" className={s.social_logo}>
                     <img src={logo} alt="Logo" />
                     </Link>
                     </div>
-                    <small className="website-rights">City Events © 2021 by Marina V</small>
-                    <div className="cosial-icons">
-                        <Link className="social-icon-link facebook"
+                    <small className={s.website_rights}>City Events © 2021 by Marina V</small>
+                    <div className={s.social_icons}>
+                        <Link className={`${s.social_icon_link} ${s.facebook}`}
                         to="/"
                         target="_blank"
                         aria-label="Facebook"
                         >
                             <i className="fab fa-facebook"></i>
                         </Link>
-                        <Link className="social-icon-link instagram"
+                        <Link className={`${s.social_icon_link} ${s.instagram}`}
                         to="/"
                         target="_blank"
                         aria-label="Instagram"
                         >
                             <i className="fab fa-instagram"></i>
                         </Link>
-                        <Link className="social-icon-link twitter"
+                        <Link className={`${s.social_icon_link} ${s.twitter}`}
                         to="/"
                         target="_blank"
                         aria-label="Twitter"

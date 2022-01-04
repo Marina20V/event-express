@@ -1,10 +1,10 @@
 import React from 'react';
-import './Button.css';
 import { Link } from 'react-router-dom';
+import s from './Button.module.scss';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+const STYLES = ['btn__primary', 'btn__outline', 'btn__test'];
 
-const SIZES = ['btn--medium', 'btn--large'];
+const SIZES = ['btn__medium', 'btn__large'];
 /* eslint-disable react/prop-types */
 
  const Button = ({
@@ -21,7 +21,7 @@ const SIZES = ['btn--medium', 'btn--large'];
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to='/sign-up' className={s.btn_mobile}>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
