@@ -36,7 +36,7 @@ function Events() {
                         <EventItem  
                             key={event.id}
                             // { index + 1 }
-                            src={event.img}
+                            src={event.img_url}
                             text={event.title}
                             label={event.cat_id}
                             path={`/events/${event.id}`}
@@ -44,24 +44,6 @@ function Events() {
                             date={event.date}
                         />
                     ))}
-                          {/* <EventItem  
-                            src={event}
-                            text="Meet new people, make memories"
-                            label="skiing event"
-                            path="closestevents"
-                        />
-                          <EventItem  
-                            src={event}
-                            text="Meet new people, make memories"
-                            label="skiing event"
-                            path="closestevents"
-                        />
-                          <EventItem  
-                            src={event}
-                            text="Meet new people, make memories"
-                            label="skiing event"
-                            path="closestevents"
-                        /> */}
                     </ul>
                 </div>
             </div>

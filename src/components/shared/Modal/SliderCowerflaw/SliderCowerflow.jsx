@@ -1,15 +1,16 @@
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { Pagination, EffectCoverflow } from "swiper";
+import axios from 'axios';
 import s from "./SliderCowerflow.module.scss";
-import event1 from'../../../../assets/images/slider/event1.jpg'
-import event2 from'../../../../assets/images/slider/event2.jpg'
-import event3 from'../../../../assets/images/slider/event3.jpg'
-import event4 from'../../../../assets/images/slider/event4.jpg'
-import event5 from'../../../../assets/images/slider/event5.jpg'
-import event6 from'../../../../assets/images/slider/event6.jpg'
-import event7 from'../../../../assets/images/slider/event7.jpg'
+
+// import event1 from'../../../../assets/images/slider/event1.jpg'
+// import event2 from'../../../../assets/images/slider/event2.jpg'
+// import event3 from'../../../../assets/images/slider/event3.jpg'
+// import event4 from'../../../../assets/images/slider/event4.jpg'
+// import event5 from'../../../../assets/images/slider/event5.jpg'
+// import event6 from'../../../../assets/images/slider/event6.jpg'
+// import event7 from'../../../../assets/images/slider/event7.jpg'
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -17,6 +18,18 @@ import "swiper/components/effect-coverflow/effect-coverflow.scss";
 
 // configure Swiper to use modules
 SwiperCore.use([Pagination, EffectCoverflow]);
+
+const [events, setEvent] = useState([]);
+ 
+const getEvents = async () => {
+    const response = await axios.get('http://localhost:5000/events');
+    setEvent(response.data);
+}
+
+useEffect(() => {
+    getEvents();
+}, []);
+
 
 function SliderCowerflow() {
 	return (
@@ -55,27 +68,11 @@ function SliderCowerflow() {
             },
           }}
 		  >
-			<SwiperSlide>
-				<img className={s.photos} src={event1} alt="img" />
+         { events.map((event) => (
+			<SwiperSlide key = {event.id}>
+				<img className={s.photos} src={event.img_url} alt="img" />
 			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event2} alt="img" />
-			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event3} alt="img"/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event4} alt="img"/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event5} alt="img"/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event6} alt="img"/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<img className={s.photos} src={event7} alt="img"/>
-			</SwiperSlide>
+         ))}
 		</Swiper>
 		</div>
 	)
