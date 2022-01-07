@@ -1,6 +1,7 @@
 .events {
     padding: 4rem;
     background: rgb(238, 238, 238);
+    width:auto
   }
   
   h1 {
@@ -14,10 +15,11 @@
     max-width: 1120px;
     width: 90%;
     margin: 0 auto;
+    width:auto;
   }
   
   .events__wrapper {
-    position: relative;
+    position: sticky;
     margin: 50px 0 45px;
   }
   

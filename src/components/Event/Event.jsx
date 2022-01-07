@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 // import { useParams } from 'react-router-dom';
 // import EventItem from '../EventItem/EventItem';
 // import HeroImage from '../shared/HeroImage/HeroImage'
@@ -7,33 +8,36 @@ import s from './Event.module.scss';
 // import DataEvents from '../../Data';
 
 function Event() {
-    // const proid = useParams();
-    // const proDetail = DataEvents.filter(x=>x.id === proid.id);
-    // const product = proDetail[0];
 
+    const [event, setEvent] = useState([]);
+ 
+    const getEventById = async () => {
+        const response = await axios.get('http://localhost:5000/events/:id');
+        setEvent(response.data);
+    }
+
+    console.log(event);
+ 
+    useEffect(() => {
+        getEventById();
+    }, []);
+ 
     const product =     {
-        "id" : 60046777806,
-		"title" : "Skiing in Tatry",
-		"location" : {},
-        "img": {eventTatry},
-		"description" : 'In the High Tatras (Vysoké Tatry/Tatry Wysokie), you can look forward to 32 kilometres of slopes: the ski resorts are served by 35 ski lifts. Have lots of fun skiing in the High Tatras (Vysoké Tatry/Tatry Wysokie)!',
-        "organizer" : "Anna",
+        "img": {eventTatry}
     };
     
     return (
         <div>
-
             <div className={s.container}>
                 <div className={s.row} >
                     <div className={s.columns}>
-                    <img src={product.img} alt={product.title} />
+                    <img src={product.img} alt={event.title} />
                     </div>
-                    {/* {DataEvents.map(cardItem)} */}
                     <div className={s.columns_info}>
-                            <h1>{product.title}</h1>
+                            <h1>{event.title}</h1>
                             <hr />
-                            <h2>{product.organizer}</h2>
-                            <p>{product.description}</p>
+                            <h2>{event.organizer}</h2>
+                            <p>{event.short_desc}</p>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,10 @@ function Events() {
                             label={event.cat_id}
                             path={`/events/${event.id}`}
                             desc={event.short_desc}
+                            entry={event.subcat_entry}
+                            type={event.subcat_type}
                             date={event.date}
+                            location={event.location}
                         />
                     ))}
                     </ul>

@@ -4,13 +4,13 @@ import '../../App.css';
 import Events from "../../components/Events/Events"
 import Footer from '../../components/shared/Footer/Footer';
 // import HeroImage from '../../components/shared/HeroImage/HeroImage';
-import SliderCowerflow from '../../components/shared/Modal/SliderCowerflaw/SliderCowerflow';
+// import SliderCowerflow from '../../components/shared/Modal/SliderCowerflaw/SliderCowerflow';
 // import SliderComponent from '../.npm i -g json-server./components/shared/Modal/Slider/SliderComponent';
 
  function Home() {
     return (
         <>  
-            <SliderCowerflow />
+            {/* <SliderCowerflow /> */}
             {/* <SliderComponent /> */}
             {/* <HeroImage /> */}
             {/* <Categories /> */}
