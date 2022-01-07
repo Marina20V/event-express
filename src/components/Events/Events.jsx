@@ -3,6 +3,7 @@ import axios from 'axios';
 import EventItem from "../EventItem/EventItem"
 // import event from "../../assets/images/event.jpg";
 import s from './Events.module.scss';
+import Categories from '../Categories/Categories';
 
 
 function Events() {
@@ -28,6 +29,7 @@ function Events() {
     return (
         <div className={s.events}>
             <h1>Check out the event</h1>
+            <Categories />
             <div className={s.events__container}>
                 <div className={s.events__wrapper}>
                     
