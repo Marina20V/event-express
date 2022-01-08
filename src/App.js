@@ -12,7 +12,8 @@ import SignUp from './pages/SignUp/SignUp';
 import Event from './components/Event/Event'
 import Events from './components/Events/Events';
 import Footer from './components/shared/Footer/Footer';
-import FileUpload from './components/shared/FileUpload/FileUpload';
+// import FileUpload from './components/shared/FileUpload/FileUpload';
+// import AddItem from './components/AddItem/AddItem';
 
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <FileUpload />
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/contact" element={<Contact />}/>
@@ -31,7 +31,9 @@ function App() {
             {/* <Route path="/" exact><Redirect to="/main" /></Route> */}
             <Route path="/events/:id" element={<Event />}/>
         </Routes>
-        <Footer/>
+        {/* <FileUpload /> */}
+         {/* <AddItem />  */}
+        {/* <Footer/> */}
       </Router>
     </>
   );
