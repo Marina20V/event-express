@@ -11,6 +11,7 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp';
 import Event from './components/Event/Event'
 import Events from './components/Events/Events';
+import Footer from './components/shared/Footer/Footer';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             {/* <Route path="/" exact><Redirect to="/main" /></Route> */}
             <Route path="/events/:id" element={<Event />}/>
         </Routes>
+        <Footer/>
       </Router>
     </>
   );

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 // import { useParams } from 'react-router-dom';
 // import EventItem from '../EventItem/EventItem';
@@ -8,11 +9,12 @@ import s from './Event.module.scss';
 // import DataEvents from '../../Data';
 
 function Event() {
-
-    const [event, setEvent] = useState([]);
  
+    const [event, setEvent] = useState([]);
+    const { id } = useParams();
+
     const getEventById = async () => {
-        const response = await axios.get('http://localhost:5000/events/:id');
+        const response = await axios.get(`http://localhost:5000/events/${id}`);
         setEvent(response.data);
     }
 
@@ -22,8 +24,8 @@ function Event() {
         getEventById();
     }, []);
  
-    const product =     {
-        "img": {eventTatry}
+    const product = {
+        img: {eventTatry}
     };
     
     return (
