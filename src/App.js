@@ -11,7 +11,7 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp';
 import Event from './components/Event/Event'
 import Events from './components/Events/Events';
-import Footer from './components/shared/Footer/Footer';
+// import Footer from './components/shared/Footer/Footer';
 // import FileUpload from './components/shared/FileUpload/FileUpload';
 // import AddItem from './components/AddItem/AddItem';
 
