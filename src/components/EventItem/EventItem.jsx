@@ -4,12 +4,22 @@ import s from './EventItem.module.scss';
 import event4 from '../../assets/images/slider/event4.jpg' 
 
 function EventItem(props) {
+
+
+    // var encodedData = btoa
+    // const url = window.URL || window.webkitURL;
+
     /* eslint-disable react/prop-types */
     return (
+
+        
         <li className={s.events__item}>
             <Link className={s.events__item__link} to={props.path}>
                 <figure className={s.events__item__pic} data-category={props.label}>
+                    {/* <img src={btoa(props.src)} alt="events-card" className={s.events__item__img}/> */}
                     <img src={event4} alt="events-card" className={s.events__item__img}/>
+
+                    {/* {console.log(imageSrc)} */}
                 </figure>
                 <div className={s.events__item__info} >
                     <h6 className={s.events__item__text}>{props.text}</h6>
