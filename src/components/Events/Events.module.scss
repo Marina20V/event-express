@@ -25,11 +25,12 @@
   
   .events__items {
     margin-bottom: 24px;
+
   }
   
   .events__item {
     display: flex;
-    flex: 1;
+    // flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
   }
@@ -111,6 +112,7 @@
   @media only screen and (min-width: 1024px) {
     .events__items {
       display: flex;
+      flex-wrap: wrap;
     }
   }
   

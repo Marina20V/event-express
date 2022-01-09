@@ -30,8 +30,8 @@ function Events() {
         <div className={s.events}>
             <h1>Check out the event</h1>
             <Categories />
-            <div className={s.events__container}>
-                <div className={s.events__wrapper}>
+            {/* <div className={s.events__container}>
+                <div className={s.events__wrapper}> */}
                     
                     <ul className={s.events__items}>
                     { events.map((event) => (
@@ -47,11 +47,12 @@ function Events() {
                             type={event.subcat_type}
                             date={event.date}
                             location={event.location}
+
                         />
                     ))}
                     </ul>
-                </div>
-            </div>
+                {/* </div>
+            </div> */}
         </div>
     )
 }
