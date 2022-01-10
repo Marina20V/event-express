@@ -55,12 +55,7 @@ export default function Footer() {
               <ul className={s.footer.list}>
                 <li>
                 </li>
-                <li>
-                </li>
-                <li>
-                </li>
-                <li>
-                </li>
+                
               </ul>
             </div>
             <div className={s.footer_col}>
