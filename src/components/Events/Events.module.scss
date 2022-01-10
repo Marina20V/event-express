@@ -99,7 +99,9 @@
   
   .events__item__text {
     color: #252e48;
+    height: 30px;;
     font-size: 18px;
+    // margin-top: -200px;
     line-height: 24px;
   }
   
@@ -119,5 +121,7 @@
   @media only screen and (max-width: 1024px) {
     .events__item {
       margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
     }
   }
