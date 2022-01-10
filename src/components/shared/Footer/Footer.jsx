@@ -6,10 +6,10 @@ import logo from "../../../assets/images/logo1.png";
 
 export default function Footer() {
   return (
-    <div className={s.footer_container}>
+    <div className={s.main_footer_container}>
       <footer className={s.footer}>
-        <div className={s.container}>
-          <div className={s.row}>
+        <div className={s.footer_container}>
+          <div className={s.footer_row}>
             <div className={s.footer_col}>
               <h4>Get the freshest news</h4>
               {/* <p className={s.footer_subscription_heading}>
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div className={s.footer_col}>
               <h4>Contact us</h4>
-              <ul>
+              <ul className={s.footer_list}>
                 <li>
                   <a href="/">
                     <i className="fas fa-map-marker-alt" /> Chernivtsi, Ukraine{" "}
@@ -52,18 +52,14 @@ export default function Footer() {
             </div>
             <div className={s.footer_col}>
               <h4>Closest Events</h4>
-              <ul>
+              <ul className={s.footer.list}>
                 <li>
-                  <a href="/">watch</a>
                 </li>
                 <li>
-                  <a href="/">bag</a>
                 </li>
                 <li>
-                  <a href="/">shoes</a>
                 </li>
                 <li>
-                  <a href="/">dress</a>
                 </li>
               </ul>
             </div>
