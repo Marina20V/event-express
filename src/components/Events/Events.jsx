@@ -38,7 +38,7 @@ function Events() {
                         <EventItem  
                             key={event.id}
                             // { index + 1 }
-                            src={event.img_url}
+                            src={event.img_url.data}
                             text={event.title}
                             label={event.cat_id}
                             path={`/events/${event.id}`}
