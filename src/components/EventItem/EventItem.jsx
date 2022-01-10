@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import s from './EventItem.module.scss';
-import event4 from '../../assets/images/slider/event4.jpg' 
+import event111 from '../../assets/images/slider/even111.jpeg' 
 
 function EventItem(props) {
 
@@ -31,7 +31,7 @@ function EventItem(props) {
                 <figure className={s.events__item__pic} data-category={props.label}>
                     {/* <img src={btoa(props.src)} alt="events-card" className={s.events__item__img}/> */}
 
-                    <img src={event4} alt="events-card" className={s.events__item__img}/>
+                    <img src={event111} alt="events-card" className={s.events__item__img}/>
                     {/* {console.log('data:image/bmp;base64,'+ Base64.encode(props.src))} */}
 
 
