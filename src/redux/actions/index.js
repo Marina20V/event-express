@@ -1,14 +1,4 @@
-export const increment = () => {
-    return {
-        type: 'INCREMENT'
-    }
-
-}
-
-export const decrement = () => {
-    return {
-        type: 'DECREMENT'
-    }
-
-}
-
+// export const handleClick = text => ({
+//     type: "test_action",
+//     payload: { ...text }
+//   });

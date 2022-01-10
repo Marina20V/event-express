@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
+// import  isClicked  from '../../../redux/'; 
 
 export default function Navbar() {
        const isClicked = useSelector(state => state.isClicked);
@@ -12,30 +13,15 @@ export default function Navbar() {
 
        const handleClick = () => 
        {
-            dispatch({type:'true'})
+            dispatch({type:'test_action'})
        }
  
        const closeMobileMenu = () => 
        {
-            dispatch({type:'false'})
+            dispatch(false)
        }
 
-    //    const showButton = () => {
-    //     //    console.log('showButton');;
-    //        if(window.innerWidth <= 960) {
-    //            dispatch({type:'false'})
-    //        }else {
-    //         dispatch({type:'true'})
-    //        }
 
-    //    };
-
-    //    useEffect(() => {
-    //        showButton();
-    //    }, []);
-
-
-    //    window.addEventListener('resize', showButton);
     return (
         <nav className="navbar">
             <div className="navbar-container">
@@ -65,6 +51,11 @@ export default function Navbar() {
                     </Link>
                     </li>
                     <li className="nav-item">
+                    <Link to="/createevent" className="nav-links" onClick={closeMobileMenu}>
+                        Add event
+                    </Link>
+                    </li>
+                    <li className="nav-item">
                     <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                         About
                     </Link>
@@ -77,7 +68,7 @@ export default function Navbar() {
                 </ul>
                 {button && <Button buttonStyle='btn__outline'>
                 <i className="fa fa-sign-in-alt"></i>
-                    SIGN UP
+                    SIGN UP/LOG IN
                 </Button>}
             </div>
         </nav>
