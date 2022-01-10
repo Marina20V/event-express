@@ -54,7 +54,7 @@ function Event() {
           </div>
           <div className={s.ev_widget_content}>
             <div className={s.content_detail_box}>
-              <ul>
+            <ul className={s.detail_information}>
                 <li className={s.ev_start_date}>
                   <div className={s.ev_icon}></div>
                   <div className={s.ev_content}>
@@ -112,7 +112,7 @@ function Event() {
           </div>
           <div className={s.ev_widget_content}>
             <div className={s.content_detail_box}>
-              <ul>
+              <ul className={s.detail_information}>
                 <li className={s.ev_start_date}>
                   <div className={s.ev_icon}></div>
                   <div className={s.ev_content}>
@@ -139,6 +139,17 @@ function Event() {
                 </div>
                 </div>
       </div>
+      <div className={s.content_organizer_box}>
+          <ul>
+            <li className={s.ev_start_date}>
+              <div className={s.ev_icon}></div>
+              <div className={s.ev_content}>
+                    <div className={s.ev_title}>Location</div>
+                    <div className={s.ev_inner}>{event.location}</div>
+              </div>
+            </li>
+          </ul>
+          </div>
       </div>
       {/* <HeroImage /> */}
       {/* <EventItem /> */}
