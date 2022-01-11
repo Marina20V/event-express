@@ -1,4 +1,9 @@
-// export const handleClick = text => ({
-//     type: "test_action",
-//     payload: { ...text }
+//  export default function search (text) {
+//       dispatch => {
+//     dispatch({
+//         type: "SEARCH",
+//         payload: { ...text }
 //   });
+// }
+
+// }

@@ -1,71 +1,88 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
 import s from './SearchBar.module.scss';
+import {search} from '../../../redux/actions/index'
 
-export default function SearchBar() {
-    const[filteredData, setFilteredData] = useState([]);
-    const [events, setEvent] = useState([]);
-    const [wordEntered, setWordEntered] = useState(['']);
+const SearchBar = () => {
 
-
- 
-    const getEvents = async () => {
-        const response = await axios.get('http://localhost:5000/events');
-        setEvent(response.data);
-    }
- 
-    useEffect(() => {
-        getEvents();
-    }, []);
- 
-
-    const handleFilter = (event) => {
-        const searchWord = event.target.value;
-        setWordEntered(searchWord)
-        const newFilter = events.filter((value) => {
-            return value.title.includes(searchWord) 
-        });
-        setFilteredData(newFilter);
+    const onChange = e => {
+        search(e.target.value)
     }
 
-    const clearInput = () => {
-        setFilteredData([])
-    }
+    /* eslint-enable no-unused-vars */
 
+
+    const mapStateToProps = state => {
+        return {
+            text: state.search.text
+        }
+    }
+/* eslint-enable no-unused-vars */
+
+    const mapDispatchToProps = dispatch => {
+        return {
+        onSearchChange: (event) => dispatch(search(event.target.value))
+        }
+    }
+    
     return (
-        <>
         <div className="header">
             <form>
                 <div className={s.form_box}>
                 <i className="fa fa-search"></i>
                     <input type="text" 
                            className={`${s.search_field} ${s.events_search}`} 
-                           placeholder="Webinars, Startup, Concert, etc." vaue={wordEntered}  onChange={handleFilter}/>
+                           placeholder="Concert, Webinar, Conferences, etc."  onChange={onChange}/>
                            <i className="fa fa-search-location"></i>
                         <input type="text" 
                            className={`${s.search_field} ${s.location}`} 
-                           placeholder="(City" />
-                                       {filteredData.length === 0 ?(
-                        <button className={s.search_btn} type="button">Search</button>
-
-                    ) : (<button className={s.clearSearch_btn} onClick={clearInput} type="button">Search</button>)
-                    }
+                           placeholder="City" />
+                            <button className={s.search_btn} type="button">Search</button>
                 </div>
             </form>
-            {filteredData.length !==0 &&(
-            <div className={s.dataResult}>
-                {events.map((value) => {
-                    return (
-                        <div className={s.dataResult} key={value.id}>
-                            {value.title}
-                            </div>
-                    )
-                })}
-            </div>
-
-            )}
             
         </div>
-        </>
     )
+
 }
+export default connect(mapStateToProps, mapDispatchToProps)(search)(SearchBar);
+    
+    
+
+// import React from 'react';
+// import {connect} from 'react-redux';
+// import s from './SearchBar.module.scss';
+// import {search} from '../../../redux/actions/index'
+
+// const SearchBar = () => {
+
+//     const onChange = e => {
+//         search(e.target.value)
+//     }
+
+
+    
+    // return (
+    //     <div className="header">
+    //         <form>
+    //             <div className={s.form_box}>
+    //             <i className="fa fa-search"></i>
+    //                 <input type="text" 
+    //                        className={`${s.search_field} ${s.events_search}`} 
+    //                        placeholder="Concert, Webinar, Conferences, etc."  onChange={onChange}/>
+    //                        <i className="fa fa-search-location"></i>
+    //                     <input type="text" 
+    //                        className={`${s.search_field} ${s.location}`} 
+    //                        placeholder="City" />
+    //                         <button className={s.search_btn} type="button">Search</button>
+    //             </div>
+    //         </form>
+            
+    //     </div>
+    // )
+
+// }
+// export default connect(mapStateToProps, mapDispatchToProps)(search)(SearchBar);
+    
+    

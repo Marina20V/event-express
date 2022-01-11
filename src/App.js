@@ -12,7 +12,6 @@ import SignUp from './pages/SignUp/SignUp';
 import Event from './components/Event/Event'
 import Events from './components/Events/Events';
 import Footer from './components/shared/Footer/Footer';
-// import SearchBar from './components/shared/SearchBar/SearchBar';
 // import FileUpload from './components/shared/FileUpload/FileUpload';
 // import AddItem from './components/AddItem/AddItem';
 
@@ -23,7 +22,6 @@ function App() {
     <>
       <Router> 
         <Navbar /> 
-          {/* <SearchBar /> */}
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/contact" element={<Contact />}/>
