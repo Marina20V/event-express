@@ -48,6 +48,8 @@ function Events() {
     } else {
       setFilteredResults(events);
     }
+
+    
   };
   return (
     <>
@@ -82,7 +84,7 @@ function Events() {
               <EventItem
                 key={eventFilter.id}
                 // { index + 1 }
-                src={eventFilter.img_url.data}
+                src={eventFilter.img_url}
                 text={eventFilter.title}
                 label={eventFilter.cat_id}
                 path={`/events/${eventFilter.id}`}
@@ -100,7 +102,7 @@ function Events() {
               <EventItem
                 key={event.id}
                 // { index + 1 }
-                src={event.img_url.data}
+                src={event.img_url}
                 text={event.title}
                 label={event.cat_id}
                 path={`/events/${event.id}`}
