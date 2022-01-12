@@ -4,17 +4,24 @@ import s from './EventItem.module.scss';
 // import event111 from '../../assets/images/slider/even111.jpeg' 
 
 function EventItem(props) {
+
+    // const imgCheck = (element) => {
+    //     if (element.match(/(https?:\/\/.+?)\//)) {
+    //         return element
+    //     }
+    //      return `http://localhost:3000/backend-express/public/uploads/${element}`;
+        
+    // }
+
     /* eslint-disable react/prop-types */
     return (
-        
-
         
         <li className={s.events__item}>
             <Link className={s.events__item__link} to={props.path}>
                 <figure className={s.events__item__pic} data-category={props.label}>
                     {/* <img src={btoa(props.src)} alt="events-card" className={s.events__item__img}/> */}
 
-                    <img src={props.img_url} alt="events-card" className={s.events__item__img}/>
+                    <img src={props.src} alt="events-card" className={s.events__item__img}/>
                     {/* {console.log('data:image/bmp;base64,'+ Base64.encode(props.src))} */}
 
 
