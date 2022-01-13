@@ -51,7 +51,7 @@ export default function Navbar() {
                     </Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="/createevent" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/add" className="nav-links" onClick={closeMobileMenu}>
                         Add event
                     </Link>
                     </li>
@@ -68,7 +68,6 @@ export default function Navbar() {
                 </ul>
                 {button && <Button buttonStyle='btn__outline'>
                 <i className="fa fa-sign-in-alt"></i>
-                    SIGN UP/LOG IN
                 </Button>}
             </div>
         </nav>

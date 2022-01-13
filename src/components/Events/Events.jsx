@@ -54,23 +54,27 @@ function Events() {
   return (
     <>
       <div className={s.events}>
-        <div className="header">
+        <div className={s.wrap}>
           <form>
-            <div className={s.form_box}>
-              <i className="fa fa-search"></i>
+            <div className={s.search}>
               <input
                 type="text"
                 className={`${s.search_field} ${s.events_search}`}
                 placeholder="Concert, Webinar, Conferences, etc."
                 onChange={(e) => searchItems(e.target.value)}
               />
-              <i className="fa fa-search-location"></i>
-              <input
+                            <button type="submit" className={s.searchButton}>
+        <i className="fa fa-search"></i>
+        </button> 
+        <input
                 type="text"
                 className={`${s.search_field} ${s.location}`}
                 placeholder="City"
                 onChange={(e) => searchLocation(e.target.value)}
               />
+              <button type="submit" className={s.searchButton}>
+        <i className="fa fa-search-location"></i>
+        </button>
             </div>
           </form>
         </div>
@@ -78,6 +82,8 @@ function Events() {
         <h1>Check out the event</h1>
         <Categories />
 
+
+        {/* {filteredResults.length === 0 ? <NoResults /> : filteredResults} */}
         {searchInput.length > 1 ? (
           <ul className={s.events__items}>
             {filteredResults.map((eventFilter) => (
@@ -88,7 +94,8 @@ function Events() {
                 text={eventFilter.title}
                 label={eventFilter.cat_id}
                 path={`/events/${eventFilter.id}`}
-                desc={eventFilter.short_desc}
+                desc={eventFilter.full_desc}
+                short_desc={eventFilter.short_desc}
                 entry={eventFilter.subcat_entry}
                 type={eventFilter.subcat_type}
                 date={eventFilter.date}
@@ -106,7 +113,8 @@ function Events() {
                 text={event.title}
                 label={event.cat_id}
                 path={`/events/${event.id}`}
-                desc={event.short_desc}
+                desc={event.full_desc}
+                short_desc={event.short_desc}
                 entry={event.subcat_entry}
                 type={event.subcat_type}
                 date={event.date}
