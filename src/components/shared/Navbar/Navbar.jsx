@@ -1,15 +1,17 @@
-import React  from 'react';
+import React, {useState}  from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
+import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
 // import  isClicked  from '../../../redux/'; 
 
 export default function Navbar() {
        const isClicked = useSelector(state => state.isClicked);
        const button = useSelector(state => state.button);
        const dispatch = useDispatch();
+       const [openModal, setOpenModal] = useState('');
 
        const handleClick = () => 
        {
@@ -65,9 +67,16 @@ export default function Navbar() {
                         Sign up
                     </Link>
                     </li>
+                    {/* <li className="nav-item">
+                    <button type="button" onClick={() => setOpenModal(true)}  className="nav-links-mobile openModalBtn">
+                        Sign up
+                    {openModal && <ModalSignUp closeModal={setOpenModal} />}
+                    </button>
+                    </li> */}
                 </ul>
-                {button && <Button buttonStyle='btn__outline'>
+                {button && <Button type="button" onClick={() => setOpenModal(true)}  className="nav-links-mobile openModalBtn" buttonStyle='btn__outline'>
                 <i className="fa fa-sign-in-alt"></i>
+                {/* {openModal && <ModalSignUp closeModal={setOpenModal} />} */}
                 </Button>}
             </div>
         </nav>

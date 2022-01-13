@@ -13,7 +13,7 @@ import Event from './components/Event/Event'
 import Events from './components/Events/Events';
 import Footer from './components/shared/Footer/Footer';
 // import FileUpload from './components/shared/FileUpload/FileUpload';
-// import AddItem from './components/AddItem/AddItem';
+import AddItemForm from './components/AddItem/AddItemForm';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/events" element={<Events />}/>
+            <Route path="/add" element={<AddItemForm />}/>
             <Route path="/sign-up" element={<SignUp />}/>
             {/* <Route path="/" exact><Redirect to="/main" /></Route> */}
             <Route path="/events/:id" element={<Event />}/>

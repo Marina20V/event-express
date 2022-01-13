@@ -1,0 +1,23 @@
+.about_info {
+    display: flex;
+}
+
+.about_info p{
+margin-left: 10px;
+}
+
+.detail_info {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto;
+    margin-bottom: 30px;
+    background-color: rgb(232, 250, 255);
+    box-shadow: 0 0 5px #ccc;
+  }
+
+  .about_img img{
+    border-radius: 8px;
+    height: 300px;
+    width: 600px;
+  }
+  

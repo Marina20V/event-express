@@ -22,6 +22,7 @@
 }
 .footer_list li{
 	list-style: none;
+	list-style-type: none;
 }
 .footer{
 	background-color: #378043;
@@ -62,6 +63,7 @@
 	color: #bbbbbb;
 	display: block;
 	transition: all 0.3s ease;
+	list-style-type: none;
 }
 .footer_col ul li a:hover{
 	color: #ffffff;
@@ -86,6 +88,7 @@
 
 ul .footer_end{
     display: inline;
+	list-style-type: none;
 }
 
 ul .footer_end li{
@@ -93,6 +96,7 @@ ul .footer_end li{
     margin-right: 50%;
     justify-content: center;
 	list-style: none;
+	list-style-type: none;
 
 }
 
