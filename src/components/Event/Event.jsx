@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-// import { useParams } from 'react-router-dom';
-// import EventItem from '../EventItem/EventItem';
-// import HeroImage from '../shared/HeroImage/HeroImage'
-// import eventTatry from "../../assets/images/eventTatry.jpg";
 import s from "./Event.module.scss";
-// import DataEvents from '../../Data';
-import event111 from "../../assets/images/slider/even111.jpeg";
+import noimg from '../../assets/images/noimg.png';
+
+
 
 function Event() {
   const [event, setEvent] = useState([]);
@@ -24,17 +21,14 @@ function Event() {
     getEventById();
   }, []);
 
-  // const product = {
-  //     img: {eventTatry}
-  // };
-
   return (
     <div className={s.detail_info}>
       <h1 className={s.title_event}>{event.title}</h1>
 
       <div className={s.details_area}>
         <div className={s.big_img}>
-          <img src={event111} alt="main_image" />
+         {(event.img_url) !== null ? <img src={event.img_url} alt="main_image" /> : 
+          <img src={noimg} alt="events-card" className={s.events__item__img}/>}
         </div>
 
         <div className={s.detail_box}>
