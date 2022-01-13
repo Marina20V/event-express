@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, {useState} from 'react';
-// import {useNavigate}  from 'react-router-dom';
+import {useNavigate}  from 'react-router-dom';
 // import FileUpload from '../shared/FileUpload/FileUpload';
 import s from './AddItem.module.scss';
 
 export default function AddItemForm() {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
             /* eslint-disable no-unused-vars */ 
 
     const [title, setTitle] = useState("");
@@ -46,7 +46,7 @@ export default function AddItemForm() {
             data: formData,
             headers: {'Content-Type': 'multipart/form-data'}
             });
-        // navigate(`/`);
+        navigate(`/`);
     }
  
     return (

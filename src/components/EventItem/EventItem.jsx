@@ -6,13 +6,13 @@ import noimg from '../../assets/images/noimg.png';
 
 function EventItem(props) {
 
-    // const imgCheck = (element) => {
-    //     if (element.match(/(https?:\/\/.+?)\//)) {
-    //         return element
-    //     }
-    //      return `http://localhost:3000/backend-express/public/uploads/${element}`;
+    const imgCheck = (element) => {
+        if (element.match(/(https?:\/\/.+?)\//)) {
+            return element
+        }
+         return `http://localhost:5000/uploads/${element}`;
         
-    // }
+    }
 
     /* eslint-disable react/prop-types */
     return (
@@ -23,7 +23,7 @@ function EventItem(props) {
                     {/* <img src={btoa(props.src)} alt="events-card" className={s.events__item__img}/> */}
                     ({(props.src) !== null} ?
                     <img src={noimg} alt="events-card" className={s.events__item__img}/>
-                        : <img src={props.src} alt="events-card" className={s.events__item__img}/>
+                        : <img src={imgCheck(props.src)} alt="events-card" className={s.events__item__img}/>
                     )
                     {/* {console.log('data:image/bmp;base64,'+ Base64.encode(props.src))} */}
 
