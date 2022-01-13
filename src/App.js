@@ -29,11 +29,8 @@ function App() {
             <Route path="/events" element={<Events />}/>
             <Route path="/add" element={<AddItemForm />}/>
             <Route path="/sign-up" element={<SignUp />}/>
-            {/* <Route path="/" exact><Redirect to="/main" /></Route> */}
             <Route path="/events/:id" element={<Event />}/>
         </Routes>
-        {/* <FileUpload /> */}
-         {/* <AddItem />  */}
         <Footer/>
       </Router>
     </>

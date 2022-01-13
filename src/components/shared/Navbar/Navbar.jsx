@@ -67,17 +67,19 @@ export default function Navbar() {
                         Sign up
                     </Link>
                     </li>
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                     <button type="button" onClick={() => setOpenModal(true)}  className="nav-links-mobile openModalBtn">
                         Sign up
                     {openModal && <ModalSignUp closeModal={setOpenModal} />}
                     </button>
-                    </li> */}
+                    </li>
                 </ul>
-                {button && <Button type="button" onClick={() => setOpenModal(true)}  className="nav-links-mobile openModalBtn" buttonStyle='btn__outline'>
-                <i className="fa fa-sign-in-alt"></i>
-                {/* {openModal && <ModalSignUp closeModal={setOpenModal} />} */}
-                </Button>}
+                {button && <Button buttonStyle='btn__outline' onClick={() => setOpenModal(true)}  className="openModal">
+                <i className="fas fa-plus-circle" />
+                {openModal && <ModalSignUp closeModal={setOpenModal} />}
+                 </Button>}
+                {button && <Button buttonStyle='btn__outline'>
+                <i className="fa fa-sign-in-alt" /> </Button>}
             </div>
         </nav>
     )

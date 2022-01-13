@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, { Pagination, EffectCoverflow } from "swiper";
-import axios from 'axios';
 import s from "./SliderCowerflow.module.scss";
 
 // import event1 from'../../../../assets/images/slider/event1.jpg'
@@ -15,23 +14,24 @@ import s from "./SliderCowerflow.module.scss";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-coverflow/effect-coverflow.scss";
+import getEvents from '../../../../api/EventApi';
 
 // configure Swiper to use modules
-SwiperCore.use([Pagination, EffectCoverflow]);
+// SwiperCore.use([Pagination, EffectCoverflow]);
 
-const [events, setEvent] = useState([]);
- 
-const getEvents = async () => {
-    const response = await axios.get('http://localhost:5000/events');
-    setEvent(response.data);
-}
 
-useEffect(() => {
-    getEvents();
+
+const SliderCowerflow = () => {
+
+  const [events, setEvent] = useState([]);
+
+useEffect(async() => {
+    setEvent( await getEvents());
 }, []);
 
+SwiperCore.use([Pagination, EffectCoverflow]);
 
-function SliderCowerflow() {
+
 	return (
 		<div className={s.photo_container}>
         <Swiper
