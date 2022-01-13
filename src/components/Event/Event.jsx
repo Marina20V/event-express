@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import s from "./Event.module.scss";
 import noimg from '../../assets/images/noimg.png';
-import constants from "../../assets/constants/constants";
+import constants from "../../constants/constants";
 
 
 
@@ -12,11 +12,9 @@ function Event() {
   const { id } = useParams();
 
   const getEventById = async () => {
-    const response = await axios.get(`http://localhost:5000/events/${id}`);
+    const response = await axios.get(`${constants.MAIN_API}/events/${id}`);
     setEvent(response.data);
   };
-
-  console.log(event);
 
   useEffect(() => {
     getEventById();

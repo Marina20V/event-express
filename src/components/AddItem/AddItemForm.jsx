@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState} from 'react';
 import {useNavigate}  from 'react-router-dom';
+import constants from '../../constants/constants';
 // import FileUpload from '../shared/FileUpload/FileUpload';
 import s from './AddItem.module.scss';
 
@@ -38,11 +39,9 @@ export default function AddItemForm() {
     formData.append('website', website)
     formData.append('file', file)
 
-        console.log('nckej');
-
         await axios({
             method: 'post',
-            url: 'http://localhost:5000/events',
+            url: `${constants.MAIN_API}/events`,
             data: formData,
             headers: {'Content-Type': 'multipart/form-data'}
             });

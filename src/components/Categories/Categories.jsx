@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import s from './Categories.module.css'
+import constants from '../../constants/constants';
 
  function Categories() {
 
@@ -8,7 +9,7 @@ import s from './Categories.module.css'
     const [categories, setCategory] = useState([]);
  
     const getCategories = async () => {
-        const response = await axios.get('http://localhost:5000/categories');
+        const response = await axios.get(`${constants.MAIN_API}/categories`);
         setCategory(response.data);
     }
  

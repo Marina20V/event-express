@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import HoverModal from '../shared/Modal/hoverModal/HoverModal';
 import s from './EventItem.module.scss';
 import noimg from '../../assets/images/noimg.png';
+import constants from '../../constants/constants';
 
 function EventItem(props) {
 
@@ -10,7 +11,7 @@ function EventItem(props) {
         if (element.match(/(https?:\/\/.+?)\//)) {
             return element
         }
-         return `http://localhost:5000/uploads/${element}`;
+         return `${constants.MAIN_API}/uploads/${element}`;
         
     }
 

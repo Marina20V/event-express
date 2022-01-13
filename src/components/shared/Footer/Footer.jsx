@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import s from "./Footer.module.scss";
 import logo from "../../../assets/images/logo1.png";
-import constants from "../../../assets/constants/constants";
+import constants from "../../../constants/constants";
 
 export default function Footer() {
   return (

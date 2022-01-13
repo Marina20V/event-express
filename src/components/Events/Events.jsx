@@ -3,7 +3,7 @@ import axios from "axios";
 import EventItem from "../EventItem/EventItem";
 import s from "./Events.module.scss";
 import Categories from "../Categories/Categories";
-import constants from "../../assets/constants/constants";
+import constants from "../../constants/constants";
 
 function Events() {
   /* eslint-disable react/prop-types */
@@ -13,7 +13,7 @@ function Events() {
   const [searchInput, setSearchInput] = useState("");
 
   const getEvents = async () => {
-    const response = await axios.get("http://localhost:5000/events");
+    const response = await axios.get(`${constants.MAIN_API}/events`);
     setEvent(response.data);
   };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./About.module.scss";
 import aboutImg from "../../assets/images/about_events.jpg";
-import constants from "../../assets/constants/constants";
+import constants from "../../constants/constants";
 
 export default function About() {
   return (

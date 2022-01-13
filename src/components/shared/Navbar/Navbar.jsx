@@ -5,7 +5,7 @@ import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
 import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
-import constants from '../../../assets/constants/constants';
+import constants from '../../../constants/constants';
 // import  isClicked  from '../../../redux/'; 
 
 export default function Navbar() {
