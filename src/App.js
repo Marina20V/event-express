@@ -6,7 +6,6 @@ import './App.css';
 import Navbar from './components/shared/Navbar/Navbar';
 import About from './pages/About/About';
 // import ClosestEvents from './pages/ClosestEvents/ClosestEvents';
-import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp';
 import Event from './components/Event/Event'
@@ -24,7 +23,6 @@ function App() {
         <Navbar /> 
         <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/contact" element={<Contact />}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/events" element={<Events />}/>
             <Route path="/add" element={<AddItemForm />}/>

@@ -5,6 +5,7 @@ import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
 import Button  from '../Button/Button';
 import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
+import constants from '../../../assets/constants/constants';
 // import  isClicked  from '../../../redux/'; 
 
 export default function Navbar() {
@@ -39,37 +40,37 @@ export default function Navbar() {
                 <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
                     <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                        Home
+                        {constants.HOME}
                     </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                     <Link to="/closestevents" className="nav-links" onClick={closeMobileMenu}>
                         Closest Events
                     </Link>
-                    </li>                    
-                    <li className="nav-item">
+                    </li>                     */}
+                    {/* <li className="nav-item">
                     <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
                         Contact
                     </Link>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                     <Link to="/add" className="nav-links" onClick={closeMobileMenu}>
-                        Add event
+                        {constants.ADD_EVENT}
                     </Link>
                     </li>
                     <li className="nav-item">
                     <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                        About
+                        {constants.ABOUT}
                     </Link>
                     </li>
                     <li className="nav-item">
                     <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
-                        Sign up
+                        {constants.SIGN_UP}
                     </Link>
                     </li>
                     <li className="nav-item">
                     <button type="button" onClick={() => setOpenModal(true)}  className="nav-links-mobile openModalBtn">
-                        Sign up
+                    {constants.SIGN_UP}
                     {openModal && <ModalSignUp closeModal={setOpenModal} />}
                     </button>
                     </li>

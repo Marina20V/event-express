@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import s from "./Event.module.scss";
 import noimg from '../../assets/images/noimg.png';
+import constants from "../../assets/constants/constants";
 
 
 
@@ -33,18 +34,18 @@ function Event() {
 
         <div className={s.detail_box}>
           <div className={s.detail_row}>
-            <h2>About this event</h2>
+            <h2>{constants.DESCRIPTION_EVENT}</h2>
           </div>
           <div className={s.detail_desc}>
             <p>{event.full_desc}</p>
             <button type="button" className={s.save_event}>
-              Save event
+              {constants.SAVE_EVENT}
             </button>
           </div>
 
           <div className={s.ev_detail_widget}>
             <div className={s.ev_widget_title}>
-              <span>Event Details</span>
+              <span>{constants.EVENT_DETAILS}</span>
             </div>
             <div className={s.ev_widget_content}>
               <div className={s.content_detail_box}>
@@ -54,7 +55,7 @@ function Event() {
                     <div className={s.ev_content}>
                       <div className={s.ev_title}>
                         <i className="fas fa-calendar-day"></i>
-                        Start Date
+                        {constants.START_DATE}
                       </div>
                       <div className={s.ev_inner}>{event.date}</div>
                     </div>
@@ -63,7 +64,7 @@ function Event() {
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
                       <div className={s.ev_title}>
-                        <i className="fas fa-ticket-alt"></i>Entry
+                        <i className="fas fa-ticket-alt"></i>{constants.ENTRY}
                       </div>
                       <div className={s.ev_inner}>{event.subcat_entry}</div>
                     </div>
@@ -72,7 +73,7 @@ function Event() {
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
                       <div className={s.ev_title}>
-                        <i className="fas fa-wifi"></i>Type
+                        <i className="fas fa-wifi"></i>{constants.TYPE}
                       </div>
                       <div className={s.ev_inner}>{event.subcat_type}</div>
                     </div>
@@ -81,7 +82,7 @@ function Event() {
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
                       <div className={s.ev_title}>
-                        <i className="fas fa-map-marker-alt"></i>Location
+                        <i className="fas fa-map-marker-alt"></i>{constants.LOCATION}
                       </div>
                       <div className={s.ev_inner}>{event.location}</div>
                     </div>
@@ -91,7 +92,7 @@ function Event() {
                     <div className={s.ev_content}>
                       <div className={s.ev_title}>
                         <i className="far fa-caret-square-down"></i>
-                        Category
+                        {constants.CATEGORY}
                       </div>
                       <div className={s.ev_inner}>{event.cat_id}</div>
                     </div>
@@ -106,14 +107,14 @@ function Event() {
             <li className={s.ev_start_date}>
               <div className={s.ev_icon}></div>
               <div className={s.ev_content}>
-                <div className={s.ev_title}><i className="fas fa-portrait"></i>Organizer</div>
-                <div className={s.ev_inner}>{event.organizer_id}Anna</div>
+                <div className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</div>
+                <div className={s.ev_inner}>{event.organizer_id}</div>
               </div>
             </li>
           </ul>
           <div className={s.ev_detail_widget}>
             <div className={s.ev_widget_title}>
-              <span>User Details</span>
+              <span>{constants.USER_DETAILS}</span>
             </div>
             <div className={s.ev_widget_content}>
               <div className={s.content_detail_box}>
@@ -121,14 +122,14 @@ function Event() {
                   <li className={s.ev_start_date}>
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
-                      <div className={s.ev_title}><i className="fas fa-phone-volume"></i>Phone</div>
+                      <div className={s.ev_title}><i className="fas fa-phone-volume"></i>{constants.PHONE}</div>
                       <div className={s.ev_inner}>{event.phone}0995634876</div>
                     </div>
                   </li>
                   <li className={s.ev_entry}>
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
-                      <div className={s.ev_title}><i className="fas fa-envelope-square"></i>Email</div>
+                      <div className={s.ev_title}><i className="fas fa-envelope-square"></i>{constants.EMAIL}</div>
                       <div className={s.ev_inner}>
                         {event.email}ann@gmail.com
                       </div>
@@ -138,9 +139,9 @@ function Event() {
                     <div className={s.ev_icon}></div>
                     <div className={s.ev_content}>
                       <div className={s.ev_title}><i className="fas fa-registered"></i>
-                        Web page</div>
+                        {constants.WEB_PAGE}</div>
                       <div className={s.ev_inner}>
-                        {event.email}ann@gmail.com
+                        {event.email}victory.com
                       </div>
                     </div>
                   </li>

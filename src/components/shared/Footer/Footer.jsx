@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import s from "./Footer.module.scss";
 import logo from "../../../assets/images/logo1.png";
+import constants from "../../../assets/constants/constants";
 
 export default function Footer() {
   return (
@@ -11,12 +12,9 @@ export default function Footer() {
         <div className={s.footer_container}>
           <div className={s.footer_row}>
             <div className={s.footer_col}>
-              <h4>Get the freshest news</h4>
-              {/* <p className={s.footer_subscription_heading}>
-                    Get the freshest CityEvents news
-                </p> */}
+              <h4>{constants.FRESHEST_NEWS}</h4>
               <p className={s.footer_subscription_text}>
-                You can unsubscribe any time
+                {constants.UNSUBSCRIBE}
               </p>
               <div className={s.input_areas}>
                 <form action="">
@@ -26,40 +24,32 @@ export default function Footer() {
                     placehoklder="Your email"
                     className={s.footer_input}
                   />
-                  <Button buttonStyle={s.btn__putline}>Subscribe</Button>
+                  <Button buttonStyle={s.btn__putline}>{constants.SUBSCRIBE}</Button>
                 </form>
               </div>
             </div>
             <div className={s.footer_col}>
-              <h4>Contact us</h4>
+              <h4>{constants.CONTACT_US}</h4>
               <ul className={s.footer_list}>
                 <li>
                   <a href="/">
-                    <i className="fas fa-map-marker-alt" /> Chernivtsi, Ukraine{" "}
+                    <i className="fas fa-map-marker-alt" /> {constants.EVENTS_LOCATION}{" "}
                   </a>
                 </li>
                 <li>
                   <a href="/">
-                    <i className="fas fa-envelope" /> cityevents@gmail.com{" "}
+                    <i className="fas fa-envelope" /> {constants.EVENTS_SITE}{" "}
                   </a>
                 </li>
                 <li>
                   <a href="/">
-                    <i className="fas fa-phone-alt" /> +38 97 489 565{" "}
+                    <i className="fas fa-phone-alt" /> {constants.EVENTS_PHONE}{" "}
                   </a>
                 </li>
               </ul>
             </div>
             <div className={s.footer_col}>
-              <h4>Closest Events</h4>
-              <ul className={s.footer.list}>
-                <li>
-                </li>
-                
-              </ul>
-            </div>
-            <div className={s.footer_col}>
-              <h4>follow us</h4>
+              <h4>{constants.FOLLOW_US}</h4>
               <div className={s.social_links}>
                 <a href="/event">
                   <i
@@ -103,7 +93,7 @@ export default function Footer() {
           </li>
           <li>
           <small className={s.website_rights}>
-            City Events © 2021 by Marina V
+            {constants.RIGHTS}
           </small>
           </li>
           </ul>

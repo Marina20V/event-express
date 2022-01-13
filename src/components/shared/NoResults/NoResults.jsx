@@ -1,8 +1,9 @@
 import React from 'react'
+import constants from '../../../assets/constants/constants'
 
 function NoResults() {
     return (
-            <h1>No results found for ypur search</h1>
+            <h1>{constants.NO_RESULTS}</h1>
     )
 }
 

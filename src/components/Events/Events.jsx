@@ -3,6 +3,7 @@ import axios from "axios";
 import EventItem from "../EventItem/EventItem";
 import s from "./Events.module.scss";
 import Categories from "../Categories/Categories";
+import constants from "../../assets/constants/constants";
 
 function Events() {
   /* eslint-disable react/prop-types */
@@ -79,7 +80,7 @@ function Events() {
           </form>
         </div>
         {/* <SearchBar /> */}
-        <h1>Check out the event</h1>
+        <h1>{constants.TITLE}</h1>
         <Categories />
 
 
