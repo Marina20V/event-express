@@ -19,14 +19,7 @@ function Events() {
   useEffect(() => {
     getEvents();
   }, []);
-
-  const imgCheck = (element) => {
-    if (element.match(/(https?:\/\/.+?)\//)) {
-        return element
-    }
-     return `${constants.MAIN_API}/uploads/${element}`;
-    
-}
+  
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
@@ -93,12 +86,14 @@ function Events() {
 
         {/* {filteredResults.length === 0 ? <NoResults /> : filteredResults} */}
         {searchInput.length > 1 ? (
+          <>
+       ( <h3>{constants.FOUND} {filteredResults.length} {constants.RESULTS}</h3>
           <ul className={s.events__items}>
             {filteredResults.map((eventFilter) => (
               <EventItem
                 key={eventFilter.id}
                 // { index + 1 }
-                src={imgCheck(eventFilter.img_url)}
+                src={eventFilter.img_url}
                 text={eventFilter.title}
                 label={eventFilter.cat_id}
                 path={`/events/${eventFilter.id}`}
@@ -111,13 +106,14 @@ function Events() {
               />
             ))}
           </ul>
+          </>
         ) : (
           <ul className={s.events__items}>
             {events.map((event) => (
               <EventItem
                 key={event.id}
                 // { index + 1 }
-                src={imgCheck(event.img_url)}
+                src={event.img_url}
                 text={event.title}
                 label={event.cat_id}
                 path={`/events/${event.id}`}

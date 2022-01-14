@@ -88,20 +88,18 @@ function Event() {
           </div>
         </div>
         <div className={s.content_organizer_box}>
-          <ul>
-            <li className={s.ev_start_date}>
-              <div className={s.ev_content}>
-                <div className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</div>
-                <div className={s.ev_inner}>{event.organizer_id}</div>
-              </div>
-            </li>
-          </ul>
           <div className={s.ev_detail_widget}>
             <div className={s.ev_widget_title}>
               <span>{constants.USER_DETAILS}</span>
             </div>
             <div className={s.ev_widget_content}>
                 <ul className={s.detail_information}>
+                <li className={s.ev_start_date}>
+                    <div className={s.ev_content}>
+                      <div className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</div>
+                      <div className={s.ev_inner}>{event.organizer_id}</div>
+                    </div>
+                  </li>
                   <li className={s.ev_start_date}>
                     <div className={s.ev_content}>
                       <div className={s.ev_title}><i className="fas fa-phone-volume"></i>{constants.PHONE}</div>

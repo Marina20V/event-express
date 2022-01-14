@@ -15,6 +15,8 @@ const constants = {
     WEB_PAGE: 'Web page',
     //  events 
     TITLE: 'Check out the event',
+    FOUND: 'Found',
+    RESULTS: 'results',
     //  footer
     FRESHEST_NEWS: 'Get the freshest news',
     UNSUBSCRIBE: 'You can unsubscribe any time',
