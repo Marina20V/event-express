@@ -20,6 +20,14 @@ function Events() {
     getEvents();
   }, []);
 
+  const imgCheck = (element) => {
+    if (element.match(/(https?:\/\/.+?)\//)) {
+        return element
+    }
+     return `${constants.MAIN_API}/uploads/${element}`;
+    
+}
+
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput !== "") {
@@ -90,7 +98,7 @@ function Events() {
               <EventItem
                 key={eventFilter.id}
                 // { index + 1 }
-                src={eventFilter.img_url}
+                src={imgCheck(eventFilter.img_url)}
                 text={eventFilter.title}
                 label={eventFilter.cat_id}
                 path={`/events/${eventFilter.id}`}
@@ -109,7 +117,7 @@ function Events() {
               <EventItem
                 key={event.id}
                 // { index + 1 }
-                src={event.img_url}
+                src={imgCheck(event.img_url)}
                 text={event.title}
                 label={event.cat_id}
                 path={`/events/${event.id}`}
