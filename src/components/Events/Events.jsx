@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EventItem from "../EventItem/EventItem";
 import s from "./Events.module.scss";
-import Categories from "../Categories/Categories";
 import constants from "../../constants/constants";
 
 function Events() {
@@ -81,7 +80,7 @@ function Events() {
         </div>
         {/* <SearchBar /> */}
         <h1>{constants.TITLE}</h1>
-        <Categories />
+        {/* <Categories /> */}
 
 
         {/* {filteredResults.length === 0 ? <NoResults /> : filteredResults} */}

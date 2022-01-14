@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo1.png';
 import './Navbar.css';
-import Button  from '../Button/Button';
+// import Button  from '../Button/Button';
 import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
 import constants from '../../../constants/constants';
 // import  isClicked  from '../../../redux/'; 
@@ -12,7 +12,7 @@ export default function Navbar() {
        const isClicked = useSelector(state => state.isClicked);
        const button = useSelector(state => state.button);
        const dispatch = useDispatch();
-       const [openModal, setOpenModal] = useState('');
+       const [openModal, setOpenModal] = useState(false);
 
        const handleClick = () => 
        {
@@ -75,12 +75,12 @@ export default function Navbar() {
                     </button>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn__outline' onClick={() => setOpenModal(true)}  className="openModal">
+                {button && <button type="button" buttonStyle='btn__outline' onClick={() => setOpenModal(true)}  className="openModal">
                 <i className="fas fa-plus-circle" />
                 {openModal && <ModalSignUp closeModal={setOpenModal} />}
-                 </Button>}
-                {button && <Button buttonStyle='btn__outline'>
-                <i className="fa fa-sign-in-alt" /> </Button>}
+                 </button>}
+                {button && <button type="button" buttonStyle='btn__outline'>
+                <i className="fa fa-sign-in-alt" /> </button>}
             </div>
         </nav>
     )

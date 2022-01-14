@@ -1,8 +1,11 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import s from './ModalSignUp.module.scss';
 
 function ModalSignUp(closeModal) {
+  const navigate = useNavigate();
+
     const [title, setTitle] = useState("");
     const [fullDesc, setDescription] = useState("");
     const [location, setLocation] = useState("");
@@ -38,11 +41,10 @@ function ModalSignUp(closeModal) {
             data: formData,
             headers: {'Content-Type': 'multipart/form-data'}
             });
-        // navigate(`/`);
+        navigate(`/`);
     }
  
     return (
-            <div className={s.modalBackground}>
                 <div className={s.modalContainer}>
         <form onSubmit={saveProduct} className={s.createEventForm}>
             <button type="button" onClick={() => closeModal(false)}> X </button>
@@ -120,7 +122,6 @@ function ModalSignUp(closeModal) {
           <button type="submit" onClick={() => closeModal(false)} id="cancelBtn">Save event</button>
 
         </form>
-        </div>
         </div>
     )
 }
