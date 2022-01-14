@@ -75,11 +75,11 @@ export default function Navbar() {
                     </button>
                     </li>
                 </ul>
-                {button && <button type="button" buttonStyle='btn__outline' onClick={() => setOpenModal(true)}  className="openModal">
+                {button && <button type="button" onClick={() => setOpenModal(true)}  className="openModal">
                 <i className="fas fa-plus-circle" />
                 {openModal && <ModalSignUp closeModal={setOpenModal} />}
                  </button>}
-                {button && <button type="button" buttonStyle='btn__outline'>
+                {button && <button type="button" >
                 <i className="fa fa-sign-in-alt" /> </button>}
             </div>
         </nav>
