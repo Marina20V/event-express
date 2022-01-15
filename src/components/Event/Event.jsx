@@ -40,95 +40,72 @@ function Event() {
           <div className={s.ev_detail_widget}>
               <span className={s.ev_widget_title}>{constants.EVENT_DETAILS}</span>
             <div className={s.ev_widget_content}>
-                <ul className={s.detail_information}>
-                  <li className={s.ev_start_date}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}>
+                <ul>
+                  <li>
+                      <p className={s.ev_title}>
                         <i className="fas fa-calendar-day"></i>
                         {constants.START_DATE}
-                      </div>
-                      <div className={s.ev_inner}>{event.date}</div>
-                    </div>
+                        </p>
+                      <span className={s.ev_inner}>{event.date}</span>
                   </li>
-                  <li className={s.ev_entry}>
-                  <div className={s.ev_content}>
-                      <div className={s.ev_title}>
+                  <li>
+                      <p className={s.ev_title} >
                         <i className="fas fa-ticket-alt"></i>{constants.ENTRY}
-                      </div>
-                      <div className={s.ev_inner}>{event.subcat_entry}</div>
-                    </div>
+                        </p>
+                      <span className={s.ev_inner}>{event.subcat_entry}</span>
                   </li>
-                  <li className={s.ev_type}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}>
+                  <li>
+                      <p className={s.ev_title}>
                         <i className="fas fa-wifi"></i>{constants.TYPE}
-                      </div>
-                      <div className={s.ev_inner}>{event.subcat_type}</div>
-                    </div>
+                      </p>
+                      <span className={s.ev_inner}>{event.subcat_type}</span>
                   </li>
-                  <li className={s.ev_category_id}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}>
+                  <li>
+                      <p className={s.ev_title}>
                         <i className="fas fa-map-marker-alt"></i>{constants.LOCATION}
-                      </div>
-                      <div className={s.ev_inner}>{event.location}</div>
-                    </div>
+                      </p>
+                      <span className={s.ev_inner}>{event.location}</span>
                   </li>
-                  <li className={s.ev_category_id}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}>
+                  <li>
+                      <p className={s.ev_title}>
                         <i className="far fa-caret-square-down"></i>
                         {constants.CATEGORY}
-                      </div>
-                      <div className={s.ev_inner}>{event.cat_id}</div>
-                    </div>
+                      </p>
+                      <span className={s.ev_inner}>{event.cat_id}</span>
                   </li>
                 </ul>
             </div>
           </div>
         </div>
         <div className={s.content_organizer_box}>
-          <div className={s.ev_detail_widget}>
-            <div className={s.ev_widget_title}>
-              <span>{constants.USER_DETAILS}</span>
-            </div>
+              <h3 className="{s.ev_widget_title}">{constants.USER_DETAILS}</h3>
             <div className={s.ev_widget_content}>
-                <ul className={s.detail_information}>
-                <li className={s.ev_start_date}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</div>
-                      <div className={s.ev_inner}>{event.organizer_id}</div>
-                    </div>
+                <ul>
+                <li>
+                      <p className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</p>
+                      <span className={s.ev_inner}>{event.organizer_id}</span>
                   </li>
-                  <li className={s.ev_start_date}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}><i className="fas fa-phone-volume"></i>{constants.PHONE}</div>
-                      <div className={s.ev_inner}>{event.phone}0995634876</div>
-                    </div>
+                  <li>
+                      <p className={s.ev_title}><i className="fas fa-phone-volume"></i>{constants.PHONE}</p>
+                      <span className={s.ev_inner}>{event.phone}0995634876</span>
                   </li>
-                  <li className={s.ev_entry}>
-                    <div className={s.ev_content}>
-                      <div className={s.ev_title}><i className="fas fa-envelope-square"></i>{constants.EMAIL}</div>
-                      <div className={s.ev_inner}>
+                  <li>
+                      <p className={s.ev_title}><i className="fas fa-envelope-square"></i>{constants.EMAIL}</p>
+                      <span className={s.ev_inner}>
                         {event.email}ann@gmail.com
-                      </div>
-                    </div>
+                    </span>
                   </li>
-                  <li className={s.ev_entry}>
-                    <div className={s.ev_content}>
+                  <li>
                       <div className={s.ev_title}><i className="fas fa-registered"></i>
                         {constants.WEB_PAGE}</div>
-                      <div className={s.ev_inner}>
+                      <span className={s.ev_inner}>
                         {event.email}victory.com
-                      </div>
-                    </div>
+                        </span>
                   </li>
                 </ul>
             </div>
           </div>
         </div>
-
-      </div>
       {/* <HeroImage /> */}
       {/* <EventItem /> */}
     </div>
