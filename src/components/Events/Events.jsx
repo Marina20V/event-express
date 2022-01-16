@@ -3,6 +3,7 @@ import axios from "axios";
 import EventItem from "../EventItem/EventItem";
 import s from "./Events.module.scss";
 import constants from "../../constants/constants";
+import Categories from '../Categories/Categories';
 
 function Events() {
   /* eslint-disable react/prop-types */
@@ -55,7 +56,7 @@ function Events() {
   return (
     <>
       <div className={s.events}>
-        <div className={s.wrap}>
+        {/* <div className={s.wrap}> */}
           <form>
             <div className={s.search}>
               <input
@@ -81,13 +82,12 @@ function Events() {
         </div>
         {/* <SearchBar /> */}
         <h1>{constants.TITLE}</h1>
-        {/* <Categories /> */}
+        <Categories />
 
-
-        {/* {filteredResults.length === 0 ? <NoResults /> : filteredResults} */}
         {searchInput.length > 1 ? (
+          
           <>
-       ( <h3>{constants.FOUND} {filteredResults.length} {constants.RESULTS}</h3>
+        <h3>{constants.FOUND} {filteredResults.length} {constants.RESULTS}</h3>
           <ul className={s.events__items}>
             {filteredResults.map((eventFilter) => (
               <EventItem
@@ -108,6 +108,7 @@ function Events() {
           </ul>
           </>
         ) : (
+          <>
           <ul className={s.events__items}>
             {events.map((event) => (
               <EventItem
@@ -126,8 +127,9 @@ function Events() {
               />
             ))}
           </ul>
+          </>
         )}
-      </div>
+      {/* </div> */}
     </>
   );
 }

@@ -14,7 +14,6 @@ import Footer from './components/shared/Footer/Footer';
 // import FileUpload from './components/shared/FileUpload/FileUpload';
 import AddItemForm from './components/AddItem/AddItemForm';
 
-
 function App() {
   
   return (

@@ -21,7 +21,8 @@ import constants from '../../constants/constants';
         <div className={s.categories_list}>
         <ul className={s.ul_categories_list}>
         { categories.map((category) => (
-            <li className={s.category} key={category.cat_id}>{category.cat_name}</li>
+            <button type="submit" className={s.category} key={category.cat_id}>{category.cat_name}
+            </button>
             ))}
         </ul>
         </div>

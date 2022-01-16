@@ -40,7 +40,7 @@ function Event() {
           <div className={s.ev_detail_widget}>
               <span className={s.ev_widget_title}>{constants.EVENT_DETAILS}</span>
             <div className={s.ev_widget_content}>
-                <ul>
+                <ul className={s.ev_ul}>
                   <li>
                       <p className={s.ev_title}>
                         <i className="fas fa-calendar-day"></i>
@@ -80,7 +80,7 @@ function Event() {
         <div className={s.content_organizer_box}>
               <h3 className="{s.ev_widget_title}">{constants.USER_DETAILS}</h3>
             <div className={s.ev_widget_content}>
-                <ul>
+                <ul className={s.ev_ul}>
                 <li>
                       <p className={s.ev_title}><i className="fas fa-portrait"></i>{constants.ORGANIZER}</p>
                       <span className={s.ev_inner}>{event.organizer_id}</span>
