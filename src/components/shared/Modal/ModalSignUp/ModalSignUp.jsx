@@ -1,9 +1,16 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import {useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import s from './ModalSignUp.module.scss';
 
-function ModalSignUp(closeModal) {
+function ModalSignUp() {
+  const dispatch = useDispatch();
+  const closeMenu = () => 
+  {
+       dispatch(false)
+  }
+
   const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
@@ -46,8 +53,9 @@ function ModalSignUp(closeModal) {
  
     return (
                 <div className={s.modalContainer}>
+                  <div className={s.blur}>
         <form onSubmit={saveProduct} className={s.createEventForm}>
-            <button type="button" onClick={() => closeModal(false)}> X </button>
+            <button type="button" onClick={closeMenu}> X </button>
 
             <input
               name="title"
@@ -77,7 +85,7 @@ function ModalSignUp(closeModal) {
               id="date"
               onChange={(e=>setDate(e.target.value))}
             />
-            <select placeholder="Category" onChange={(e=>setCategory(e.target.value))}>
+            <select className={s.modal_ol} placeholder="Category" onChange={(e=>setCategory(e.target.value))}>
              <option>ALL</option>
              <option>BUSINESS</option>
              <option>ART</option>
@@ -97,11 +105,11 @@ function ModalSignUp(closeModal) {
               id="organizer name"
               onChange={(e=>setOrganizer(e.target.value))}
             />
-            <select onChange={(e=>setType(e.target.value))} placeholder="Type">
+            <select className={s.modal_ol} onChange={(e=>setType(e.target.value))} placeholder="Type">
              <option>ONLINE</option>
              <option>OFFLINE</option>
             </select>
-            <select placeholder="Entry" onChange={(e=>setEntry(e.target.value))}>
+            <select className={s.modal_ol} placeholder="Entry" onChange={(e=>setEntry(e.target.value))}>
              <option>FREE</option>
              <option>PAID</option>
             </select>
@@ -119,9 +127,10 @@ function ModalSignUp(closeModal) {
               id="file"
               onChange={e=>setFile(e.target.files[0])}
             />
-          <button type="submit" onClick={() => closeModal(false)} id="cancelBtn">Save event</button>
+          <button type="submit" onClick={closeMenu} id="cancelBtn">Save event</button>
 
         </form>
+        </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 const isclickReducer = (state = false, action) => {
 
     switch(action.type) {
-        case 'test_action':
+        case 'click':
             return !state;
         case '':
             default: 

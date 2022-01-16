@@ -1,16 +1,35 @@
-
 .createEventForm input {
-    width: 300px;
-    height: 50px;
-    margin:10px;
-}
-
-.createEventForm {
-    position: relative;
-  
-    width  : 740px;
-    height : 498px;
-    margin : 0 auto;
-  
-    background: #9ccc9c;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 20px;
+    margin:5px;
   }
+  
+  .modal_ol {
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:5px;
+    align-items: center;
+    height: 20px;
+  }
+  
+  
+  .createEventForm {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin : 0 auto;
+    padding-top: 2px;
+    background: #9ccc9c;
+    }
+
+    h2 {
+        padding: 2px;;
+
+    }

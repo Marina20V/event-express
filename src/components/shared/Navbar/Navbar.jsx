@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -11,14 +11,13 @@ export default function Navbar() {
        const isClicked = useSelector(state => state.isClicked);
        const button = useSelector(state => state.button);
        const dispatch = useDispatch();
-       const [openModal, setOpenModal] = useState(false);
 
        const handleClick = () => 
        {
-            dispatch({type:'test_action'})
+            dispatch({type:'click'})
        }
  
-       const closeMobileMenu = () => 
+       const closeMenu = () => 
        {
             dispatch(false)
        }
@@ -34,39 +33,39 @@ export default function Navbar() {
                 </div>
                 <ul className={isClicked ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
-                    <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/" className="nav-links" onClick={closeMenu}>
                         {constants.HOME}
                     </Link>
                     </li>
                     {/* <li className="nav-item">
-                    <Link to="/closestevents" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/closestevents" className="nav-links" onClick={closeMenu}>
                         Closest Events
                     </Link>
                     </li>                     */}
                     {/* <li className="nav-item">
-                    <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/contact" className="nav-links" onClick={closeMenu}>
                         Contact
                     </Link>
                     </li> */}
                     <li className="nav-item">
-                    <Link to="/add" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/add" className="nav-links" onClick={closeMenu}>
                         {constants.ADD_EVENT}
                     </Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                    <Link to="/about" className="nav-links" onClick={closeMenu}>
                         {constants.ABOUT}
                     </Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
+                    <Link to="/sign-up" className="nav-links-mobile" onClick={closeMenu}>
                         {constants.SIGN_UP}
                     </Link>
                     </li>
                 </ul>
-                {button && <button type="button" onClick={() => setOpenModal(true)}  className="openModal">
+                {<button type="button" onClick={(handleClick)}  className="openModal">
                 <i className="fas fa-plus-circle" />
-                {openModal && <ModalSignUp closeModal={setOpenModal} />}
+                {isClicked && <ModalSignUp closeModal={closeMenu} />}
                  </button>}
                 {button && <button type="button" >
                 <i className="fa fa-sign-in-alt" /> </button>}

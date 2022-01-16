@@ -49,8 +49,8 @@ export default function AddItemForm() {
     }
  
     return (
-            
         <form onSubmit={saveProduct} className={s.createEventForm}>
+          <h2>Create your event</h2>
             <input
               name="title"
               placeholder="title"
@@ -79,7 +79,7 @@ export default function AddItemForm() {
               id="date"
               onChange={(e=>setDate(e.target.value))}
             />
-            <select placeholder="Category" onChange={(e=>setCategory(e.target.value))}>
+            <select className={s.modal_ol} placeholder="Category" onChange={(e=>setCategory(e.target.value))}>
              <option>ALL</option>
              <option>BUSINESS</option>
              <option>ART</option>
@@ -99,11 +99,11 @@ export default function AddItemForm() {
               id="organizer name"
               onChange={(e=>setOrganizer(e.target.value))}
             />
-            <select onChange={(e=>setType(e.target.value))} placeholder="Type">
+            <select className={s.modal_ol} onChange={(e=>setType(e.target.value))} placeholder="Type">
              <option>ONLINE</option>
              <option>OFFLINE</option>
             </select>
-            <select placeholder="Entry" onChange={(e=>setEntry(e.target.value))}>
+            <select className={s.modal_ol} placeholder="Entry" onChange={(e=>setEntry(e.target.value))}>
              <option>FREE</option>
              <option>PAID</option>
             </select>
