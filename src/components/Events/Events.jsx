@@ -56,7 +56,7 @@ function Events() {
   return (
     <>
       <div className={s.events}>
-        {/* <div className={s.wrap}> */}
+        <div className={s.wrap}>
           <form>
             <div className={s.search}>
               <input
@@ -129,7 +129,7 @@ function Events() {
           </ul>
           </>
         )}
-      {/* </div> */}
+      </div>
     </>
   );
 }
