@@ -3,7 +3,7 @@ import axios from "axios";
 import EventItem from "../EventItem/EventItem";
 import s from "./Events.module.scss";
 import constants from "../../constants/constants";
-import Categories from '../Categories/Categories';
+// import Categories from '../Categories/Categories';
 
 function Events() {
   /* eslint-disable react/prop-types */
@@ -78,7 +78,7 @@ function Events() {
         </div>
         {/* <SearchBar /> */}
         <h1>{constants.TITLE}</h1>
-        <Categories />
+        {/* <Categories /> */}
 
         {searchInput.length > 1 ? (
           

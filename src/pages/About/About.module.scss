@@ -1,5 +1,7 @@
 .about_info {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .about_info p{
@@ -17,7 +19,6 @@ margin-left: 10px;
 
   .about_img img{
     border-radius: 8px;
-    height: 300px;
     width: 600px;
   }
   

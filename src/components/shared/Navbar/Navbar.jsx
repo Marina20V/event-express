@@ -5,7 +5,7 @@ import './Navbar.css';
 // import Button  from '../Button/Button';
 import ModalSignUp from '../Modal/ModalSignUp/ModalSignUp';
 import constants from '../../../constants/constants';
-// import  isClicked  from '../../../redux/'; 
+import logo from "../../../assets/images/logo1.png";
 
 export default function Navbar() {
        const isClicked = useSelector(state => state.isClicked);
@@ -26,6 +26,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
+                <img className="navbar_logo" src={logo}  alt="logo"/>
                 <div className="menu-icon" role = "button" tabIndex={0} onClick={handleClick} onKeyUp={handleClick} >
                 {/* <div className="menu-icon"> */}
 

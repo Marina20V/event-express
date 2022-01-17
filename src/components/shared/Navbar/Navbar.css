@@ -78,88 +78,12 @@
   display: none;
 }
 
-
-
-
-/* .navbar {
-  background: #378043;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
-  top: 20;
-  z-index: 999;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  max-width: 1500px;
-}
-
-/* .navbar-logo {
-  margin-bottom: 2px;
-  color: #fff;
-  justify-self: start;
-  margin-left: 20px;
+.navbar_logo {
+  width: 130px;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-self: center;
-  width:300px;
-  height:50px;
-} */
-
-/* .fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
-}
-
-.nav-menu {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  width: 50vw;
-  justify-content: end;
-  margin-right: 1rem;
-} */
-
-/* .nav-item {
-  height: 20px;
-} */
-
-/* .nav-links {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none; */
-  /* padding: 2rem 3px; */
-  /* height: 100%;
-}
-
-.nav-links:hover { */
-  /* border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
-}
-
-.fa-bars {
-  color: #fff;
-}
-
-.nav-links-mobile {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-} */ 
+  display: block;
+  margin: 0 auto;
+  }
 
 @media screen and (max-width:767px) {
   .NavbarItems {
@@ -182,6 +106,14 @@
     opacity: 1;
     transition: all 0.5s ease;
   }
+
+  .navbar_logo {
+    width: 150px;
+    height:50px;
+    cursor: pointer;
+    display: block;
+    margin-left: -90px;
+    }
 
   .ul{
     position: fixed;
@@ -221,13 +153,6 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: -140px;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
-
   .menu-icon {
     display: block;
     position: absolute;
@@ -245,18 +170,10 @@
 
   .nav-links-mobile {
     display: block;
-    /* text-align: center; */
-    /* margin: 2rem auto; */
-    /* border-radius: 4px; */
-    /* width: 20%; */
-    /* text-decoration: none; */
     font-size: 1.5rem;
     background-color: transparent;
     color: #fff;
     padding: 14px 20px;
-    /* border: 1px solid #fff; */
-    /* transition: all 0.3s ease-out; */
-    /* height: 10%; */
   }
 
   .nav-links-mobile:hover {
