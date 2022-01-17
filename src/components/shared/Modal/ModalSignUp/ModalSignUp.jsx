@@ -55,7 +55,7 @@ function ModalSignUp() {
                 <div className={s.modalContainer}>
                   <div className={s.blur}>
         <form onSubmit={saveProduct} className={s.createEventForm}>
-            <button type="button" onClick={closeMenu}> X </button>
+            <button name="close" type="button" onClick={closeMenu}> X </button>
 
             <input
               name="title"

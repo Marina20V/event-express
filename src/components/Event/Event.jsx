@@ -2,23 +2,37 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import s from "./Event.module.scss";
-import noimg from '../../assets/images/noimg.png';
+// import noimg from '../../assets/images/noimg.png';
 import constants from "../../constants/constants";
 
 
 
 function Event() {
+
+  
   const [event, setEvent] = useState([]);
   const { id } = useParams();
 
   const getEventById = async () => {
     const response = await axios.get(`${constants.MAIN_API}/events/${id}`);
     setEvent(response.data);
+    console.log(response.data);
   };
+
 
   useEffect(() => {
     getEventById();
   }, []);
+
+  const imgCheck = (element) => {
+    console.log(element.img_url);
+
+    if (element.img_url.match(/(https?:\/\/.+?)\//)) {
+        return true
+    }
+     return false;   
+}
+
 
   return (
     <div className={s.detail_info}>
@@ -26,8 +40,8 @@ function Event() {
 
       <div className={s.details_area}>
         <div className={s.big_img}>
-         {(event.img_url) !== null ? <img src={event.img_url} alt="main_image" /> : 
-          <img src={noimg} alt="events-card" className={s.events__item__img}/>}
+         {imgCheck(event) ? <img src={event.img_url} alt="main_image" /> : 
+          <img src={`${constants.MAIN_API}/uploads/${event.img_url}`} alt="events-card" className={s.events__item__img}/>}
         </div>
 
         <div className={s.detail_box}>

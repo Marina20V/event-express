@@ -1,11 +1,6 @@
 import * as actionTypes from "./savedevents-types";
 
 
-export const fetchEvents = () => {
-    const response = await axios.get(`${constants.MAIN_API}/events`);
-    return response;
-}
-
 export const addToSaved = (itemID) => {
     return {
         type: actionTypes.ADD_TO_SAVED,
