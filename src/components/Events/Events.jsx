@@ -65,18 +65,14 @@ function Events() {
                 placeholder="Concert, Webinar, Conferences, etc."
                 onChange={(e) => searchItems(e.target.value)}
               />
-                            <button type="submit" className={s.searchButton}>
-        <i className="fa fa-search"></i>
-        </button> 
+               <i className="fa fa-search"></i>
         <input
                 type="text"
                 className={`${s.search_field} ${s.location}`}
                 placeholder="City"
                 onChange={(e) => searchLocation(e.target.value)}
               />
-              <button type="submit" className={s.searchButton}>
         <i className="fa fa-search-location"></i>
-        </button>
             </div>
           </form>
         </div>
