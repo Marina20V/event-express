@@ -24,14 +24,14 @@ function Event() {
     getEventById();
   }, []);
 
-  const imgCheck = (element) => {
-    console.log(element.img_url);
+//   const imgCheck = (element) => {
+//     console.log(element.img_url);
 
-    if (element.img_url.match(/(https?:\/\/.+?)\//)) {
-        return true
-    }
-     return false;   
-}
+//     if (element.img_url.match(/(https?:\/\/.+?)\//)) {
+//         return true
+//     }
+//      return false;   
+// }
 
 
   return (
@@ -40,7 +40,7 @@ function Event() {
 
       <div className={s.details_area}>
         <div className={s.big_img}>
-         {imgCheck(event) ? <img src={event.img_url} alt="main_image" /> : 
+         {(event) ? <img src={event.img_url} alt="main_image" /> : 
           <img src={`${constants.MAIN_API}/uploads/${event.img_url}`} alt="events-card" className={s.events__item__img}/>}
         </div>
 
